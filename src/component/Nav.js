@@ -1,7 +1,9 @@
+import ChooseTrack from "./toasts/ChooseTrack";
+
 export default function Nav({ track, setTrack }) {
     return (
         <nav className="px-10 max-w-md mx-auto content-center">
-            <div className="alert shadow-lg alert-sm mb-3 max-w-xs mx-auto">Choose a track.</div>
+            {!track && <ChooseTrack />}
             <div className="btn-group flex justify-center">
                 <button 
                     className={`btn float-none ${track === 'az900' && 'btn-active'}`}
