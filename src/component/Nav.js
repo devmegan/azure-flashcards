@@ -1,4 +1,4 @@
-import ChooseTrack from "./toasts/ChooseTrack";
+import ChooseTrack from "./toast/ChooseTrack";
 
 export default function Nav({ track, setTrack }) {
     return (
