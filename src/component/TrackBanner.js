@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-export default function TrackBanner({ track, questions }) {
-    const numQs = Object.keys(questions).length;
-    const [correct, setCorrect] = useState(0);
+export default function TrackBanner({ correct, track, questions }) {
 
     return (
         <div className="bg-gray-800 text-center py-2">
@@ -10,10 +6,10 @@ export default function TrackBanner({ track, questions }) {
             <progress 
                 className="progress progress-primary w-56 bg-gray-800" 
                 value={correct} 
-                max={numQs}
+                max={questions}
             >
             </progress>
-            <p>Correctly answered {correct}/{numQs}</p>
+            <p>Correctly answered {correct}/{questions}</p>
         </div>
     );
 }
